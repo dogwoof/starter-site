@@ -25,7 +25,7 @@ define('SITE_URL', 'http://filmsite.com'); // used to configure things such as t
 
 define('TWITTER_ACCOUNT', 'dogwoof'); // used to pull in tweets
 
-define('TWITTER_SEARCHTERM', 'into eternity movie'); // used to pull in tweets
+define('TWITTER_SEARCHTERM', 'search terms'); // used to pull in tweets
 
 /*
  * Facebook settings
@@ -40,6 +40,7 @@ define('FACEBOOK_URL', 'http://www.facebook.com/pages/MY-FILM-SITE');
  */
 
 define('YOUTUBE_URL', 'http://youtube.com');
+define('YOUTUBE_TRAILER_ID', '');
 
 /*
  * Functions...

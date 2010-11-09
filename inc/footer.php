@@ -4,11 +4,13 @@
         
         <?php if ( TWITTER_ACCOUNT || TWITTER_SEARCHTERM ): ?>
             
-        <div class="section">
+        <div class="section twitter">
+            
+            <h2>Join the conversation on Twitter</h2>
             
             <?php if ( TWITTER_ACCOUNT ): ?>
 
-            <div id="twitter_account" class="twitter">
+            <div id="twitter_account" class="feed">
 
                 <h3>Twitter timeline for <span class="term">@<?php echo TWITTER_ACCOUNT; ?></span></h3>
                 
@@ -20,7 +22,7 @@
 
             <?php if ( TWITTER_SEARCHTERM ): ?>
 
-            <div id="twitter_mentions" class="twitter">
+            <div id="twitter_mentions" class="feed">
 
                 <h3>Searching Twitter for '<span class="term"><?php echo TWITTER_SEARCHTERM; ?></span>'</h3>
 
