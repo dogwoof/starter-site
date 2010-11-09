@@ -1,0 +1,73 @@
+/*=============================================================
+Type:               Site-specific stylesheet
+Document Author:    Dogwoof
+Author Email:       
+---------------------------------------------------------------
+Creation Date:      
+============================================================ */
+
+/* General Styles
+============================================== */
+
+body {
+    font-size: 14px;
+    background: #EEE;
+    font-family: Arial, sans-serif;
+}
+
+.section {
+    width: 920px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #FFF;
+    padding: 10px 20px;
+}
+
+.primary {
+    width: 600px;
+    float: left;
+}
+
+.secondary {
+    width: 300px;
+    float: right;
+}
+
+
+/* Header
+============================================== */
+
+/* navigation */
+
+.nav li {
+    list-style: none;
+    margin: 0;
+}
+
+.nav li a {
+    display: block;
+    float: left;
+    padding: 10px;
+    background: #EEE;
+    margin-right: 10px;
+}
+
+
+/* Main content
+============================================== */
+
+
+
+
+
+/* Social 
+============================================== */
+
+.loading {
+    font-style: italic;
+}
+
+
+/* Footer
+============================================== */
+
