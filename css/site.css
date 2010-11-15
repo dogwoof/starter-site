@@ -23,12 +23,12 @@ body {
     padding: 10px 20px;
 }
 
-.primary {
+div.primary {
     width: 600px;
     float: left;
 }
 
-.secondary {
+div.secondary {
     width: 300px;
     float: right;
 }
@@ -63,11 +63,123 @@ body {
 /* Social 
 ============================================== */
 
-.loading {
+#social {
+    margin: 10px auto 20px auto;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+#social div.twitter {
+    width: 700px;
+    float: left;
+    overflow: hidden;
+}
+
+#social .twitter .feed {
+    width: 325px;
+    float: left;
+    margin-right: 25px;
+}
+
+.tweet img {
+    float: left;
+}
+
+.tweet .text {
+    margin-left: 34px;
+}
+
+.tweet .time a {
+    color: #888;
     font-style: italic;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/* form */
+
+.hasJS #elsewhere label {
+    display: none;
+}
+
+#elsewhere form input {
+    width: 60%;
+    border: 1px solid #666;
+    padding: 4px;
+    font-size: 13px;
+}
+
+#elsewhere button {
+    background: #EC5F03;
+    border: 0;
+    color: #FFF;
+    padding: 4px 5px;
+}
+
+#signup .inline-labeled {
+    color: #999;
+    font-style: italic;
+}
+
+#signup .with-content {
+    color: #FFF;
+    font-style: normal;
+}
+
+#social #elsewhere {
+    width: 220px;
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+
+#social ul {
+    margin-top: 20px;
+}
+
+#elsewhere a {
+    display: block;
+    width: 220px;
+    height: 60px;
+    text-indent: -9999px;
+    background: url('../img/sprite_social.gif') no-repeat 0 0;
+    margin-bottom: 10px;
+}
+
+#social .facebook a {
+    background-position: 0 -170px;
+}
+
+#social .twitter a {
+    background-position: 0 -95px;
+}
+
+#social .youtube a {
+    background-position: 0 -264px;
+}
+
+#social .facebook a:hover {
+    background-position: -220px -170px;
+}
+
+#social .twitter a:hover {
+    background-position: -220px -95px;
+}
+
+#social .youtube a:hover {
+    background-position: -220px -264px;
 }
 
 
 /* Footer
 ============================================== */
+
+.footer {
+    clear: both;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 11px;
+}
 

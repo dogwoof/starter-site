@@ -13,7 +13,11 @@
     <!-- <meta name="viewport" content="width=;"> -->
     
     <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/lightbox.css">
 	<link rel="stylesheet" href="/css/site.css">
+	
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     
     <script>
         var html = document.getElementsByTagName('html')[0];
@@ -26,26 +30,25 @@
   	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
 	<script>!window.jQuery && document.write('<script src="/js/jquery-1.4.3.min.js"><\/script>')</script>
 	<!--[if IE 6]><script src="/js/dd_belatedpng.js"></script><![endif]-->
-	<script src="/js/cufon.js"></script>
-	<script src="/js/fonts.js"></script>
 	<script src="/js/plugins.js"></script>
 	<script src="/js/main.js"></script>
 	
 	<title><?php if (isset($title)) echo $title.' | '; echo SITE_NAME; ?></title>
 </head>
-<body class="section_<?php echo str_replace( '.php', '', segment(0)); ?>">
+<body class="section_<?php echo segment(0) ? str_replace( '.php', '', segment(0)) : 'home'; ?>">
         
     <div class="receptacle header" role="banner">
         
-        <div class="section">
+        <div class="section nav">
 
-            <ol class="nav primary" role="navigation">
+            <ol class="primary" role="navigation">
                 <?php
                     echo nav_items(array( 
                             'Home'           => '/',
                             'About the Film' => '/about.php',
                             'Screenings'     => '/screenings.php',
                             'The Filmmakers' => '/filmmakers.php',
+                            'Gallery'        => '/gallery.php',
                             'Press'          => '/press.php',
                             'Contact'        => '/contact.php'
                     ));
@@ -54,15 +57,9 @@
         
         </div>
         
-        <div class="section">
+        <div class="section head">
 
             <a href="/" class="branding"><h1><?php echo SITE_NAME; ?></h1></a>
-            
-            <div class="social">
-                
-                
-                
-            </div>
             
         </div>
                         

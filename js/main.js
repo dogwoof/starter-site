@@ -39,6 +39,10 @@ Creation Date:
     
         initTwitter();
         
+        // $('form input[type=text]').inlineLabel();
+        
+        $('a[rel*=fullsize]').lightBox();
+        
     });
     
 })( window, document, _settings, jQuery );

@@ -39,13 +39,15 @@ define('FACEBOOK_URL', 'http://www.facebook.com/pages/MY-FILM-SITE');
  *
  */
 
-define('YOUTUBE_URL', 'http://youtube.com');
-define('YOUTUBE_TRAILER_ID', '');
+define('YOUTUBE_URL', 'http://www.youtube.com/dogwoof');
+define('YOUTUBE_TRAILER_ID', false );
 
 /*
  * Functions...
  *
  */
+ 
+define('DOCROOT', $_SERVER['DOCUMENT_ROOT']);
 
 function nav_items( $items, $classes = FALSE )
 {
@@ -69,6 +71,38 @@ function nav_items( $items, $classes = FALSE )
         }
     }
     return $output;
+}
+
+function gallery_pics( $thumb_size_x = 100, $thumb_size_y = 100, $gallery_path = 'img/gallery/', $cache_path = 'cache/' )
+{
+    require_once DOCROOT.'/inc/vendor/gdthumb/ThumbLib.inc.php';
+
+    // prob don't need to touch this
+
+    $images = array();
+
+    $images_path = DOCROOT.'/'.$gallery_path;
+
+    if ( is_dir( $images_path ) )
+    {
+        foreach ( glob($images_path.'*') as $img )
+        {
+            $thumbpath = DOCROOT.'/'.$cache_path.'thumb_'.$thumb_size_x.'_'.$thumb_size_y.'_'.basename($img);
+            if ( ! file_exists( $thumbpath ) )
+            {
+                try
+                {
+                     $thumb = PhpThumbFactory::create($img);
+                     $thumb->adaptiveResize($thumb_size_x, $thumb_size_y);
+                     $thumb->save($thumbpath);
+                }
+                catch (Exception $e){}                
+            }
+            $images[] = array('original'=>str_replace(DOCROOT, '', $img ),
+                                'thumb'=>str_replace(DOCROOT, '', $thumbpath ));
+        }
+    }
+    return $images;
 }
 
 function url_segs( $url = NULL )

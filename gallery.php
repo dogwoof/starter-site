@@ -1,12 +1,18 @@
 <?php
-$title = "Press";
+$title = "Gallery";
 include('inc/header.php'); ?>
 
 <div class="section">
     
     <div class="primary">
         
-        <h2>Press</h2>
+        <h2>Gallery</h2>
+        
+        <ul class="gallery">
+        
+        <?php include('inc/gallery.php'); ?>
+        
+        </ul>
         
     </div>
     

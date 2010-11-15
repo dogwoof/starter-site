@@ -1,13 +1,11 @@
     </div>
     
-    <div id="social" class="receptacle social">
+    <div id="social" class="receptacle section social">
         
         <?php if ( TWITTER_ACCOUNT || TWITTER_SEARCHTERM ): ?>
             
-        <div class="section twitter">
-            
-            <h2>Join the conversation on Twitter</h2>
-            
+        <div class="twitter">
+                    
             <?php if ( TWITTER_ACCOUNT ): ?>
 
             <div id="twitter_account" class="feed">
@@ -36,7 +34,9 @@
             
         <?php endif; ?>
         
-        <div id="elsewhere" class="section external">
+        <div id="elsewhere" class="external">
+            
+            <?php include($_SERVER['DOCUMENT_ROOT'].'/inc/signup.php'); ?>
             
             <ul class="nav">
                 <?php if ( FACEBOOK_URL ): ?><li class="facebook"><a href="<?php echo FACEBOOK_URL; ?>">Facebook</a></li><?php endif; ?>
